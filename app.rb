@@ -22,3 +22,8 @@ get '/articles' do
   @articles = Article.all
   erb :'articles/index'
 end
+
+get '/articles/:id' do |id|
+  @article = Article.get!(id)
+  erb :'articles/show'
+end
