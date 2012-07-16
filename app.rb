@@ -57,3 +57,9 @@ put '/articles/:id' do |id|
     redirect "/articles/#{id}/edit"
   end
 end
+
+delete '/articles/:id' do |id|
+  article = Article.get!(id)
+  article.destroy!
+  redirect "/articles"
+end

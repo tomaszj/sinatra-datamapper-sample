@@ -3,3 +3,8 @@
 <p><%= @article.content %></p>
 
 <a href="/articles">Back</a> | <a href="/articles/<%= @article.id %>/edit">Edit</a>
+
+<form action="/articles/<%= @article.id %>" method="post">
+<input type="hidden" name="_method" value="delete" />
+<input type="submit" value="Delete">
+</form>
