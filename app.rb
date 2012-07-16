@@ -1,5 +1,19 @@
+require 'rubygems'
 require 'sinatra'
+require 'data_mapper'
+
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/dev.db")
+
+class Article
+  include DataMapper::Resource
+  
+  property :id, Serial
+  property :title, String
+  property :content, Text
+end
+
+DataMapper.auto_upgrade!
 
 get '/' do
-  "Hello world"
+  erb :index
 end
