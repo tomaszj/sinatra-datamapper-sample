@@ -1,4 +1,4 @@
 sinatra-datamapper-sample
 =========================
 
-Example project for Sinatra and DataMapper usage.
+Sample project showing usage of Sinatra with DataMapper for quick and simple data persistence.
