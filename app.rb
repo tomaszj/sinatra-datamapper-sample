@@ -32,6 +32,11 @@ get '/articles/:id' do |id|
   erb :'articles/show'
 end
 
+get '/articles/:id/edit' do |id|
+  @article = Article.get!(id)
+  erb :'articles/edit'
+end
+
 post '/articles' do
   article = Article.new(params[:article])
   
@@ -40,6 +45,15 @@ post '/articles' do
   else
     redirect '/articles/new'
   end
+end
+
+put '/articles/:id' do |id|
+  article = Article.get!(id)
+  success = article.update!(params[:article])
   
-  
+  if success
+    redirect "/articles/#{id}"
+  else
+    redirect "/articles/#{id}/edit"
+  end
 end
