@@ -17,3 +17,8 @@ DataMapper.auto_upgrade!
 get '/' do
   erb :index
 end
+
+get '/articles' do
+  @articles = Article.all
+  erb :'articles/index'
+end
