@@ -1,7 +1,7 @@
 sinatra-datamapper-sample
 =========================
 
-Sample project showing usage of Sinatra with DataMapper for quick and simple data persistence.
+Sample project showing usage of Sinatra with DataMapper for quick and simple data persistence. This is used to back the blog post on Kainos.pl website (http://kainos.pl/blog/ruby-i-aplikacje-internetowe-vol-2-datamapper)
 
 Features
 ========
