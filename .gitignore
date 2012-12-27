@@ -2,6 +2,7 @@
 *.rbc
 .bundle
 .config
+*.db
 coverage
 InstalledFiles
 lib/bundler/man
