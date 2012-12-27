@@ -6,13 +6,13 @@ DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/dev.db")
 
 class Article
   include DataMapper::Resource
-  
+
   property :id, Serial
   property :title, String
   property :content, Text
 end
 
-DataMapper.auto_upgrade!
+DataMapper.finalize.auto_upgrade!
 
 get '/' do
   erb :index
