@@ -20,13 +20,13 @@ How to run
 ==========
 Run:
 ```
-$bundle install
-$ruby app.rb
+$ bundle install
+$ ruby app.rb
 ```
 
 If you'd like to access console (i.e. to add your own entities):
 ```
-$irb -r ./app.rb
+$ irb -r ./app.rb
 ```
 
 Future enhancements
