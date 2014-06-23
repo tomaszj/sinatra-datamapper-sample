@@ -1,7 +1,7 @@
 <h2>Articles</h2>
 
 <% @articles.each do |article| %>
-	<h3><a href="/articles/<%= article.id %>"><%= article.title %></a></h2>
+	<h3><a href="/articles/<%= article.id %>"><%= article.title %></a></h3>
 <% end %>
 
 <a href="/articles/new">Add a new article</a>
